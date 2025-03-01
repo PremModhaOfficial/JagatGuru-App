@@ -4,17 +4,21 @@ import { View, Text } from 'react-native';
 
 import ProggressBar from './ProggressBar';
 
-export default function HabitProgress() {
+export default function HabitProgress({ id }: { id: string }) {
+    const habit = {
+        id,
+        name: 'Meditae At the Park',
+    };
     return (
         <View>
             <Link
                 href={{
                     pathname: '/habit/[id]',
-                    params: { id: 1 },
+                    params: { id },
                 }}>
-                <Text className="m-1 text-white">Habit Name</Text>
+                <Text className="m-1 text-white">{habit.name}</Text>
                 <View>
-                    <ProggressBar progress={100} />
+                    <ProggressBar progress={10} />
                 </View>
             </Link>
         </View>

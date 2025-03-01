@@ -1,7 +1,7 @@
+import { Link } from 'expo-router';
 import { ScrollView, View } from 'react-native';
 
 import HabitProgress from '~/components/Composite/HabitProgress';
-import HomeButton from '~/components/Composite/HomeButton';
 import PlayerCard, { PlayerCardProps } from '~/components/Composite/PlayerCard';
 import ProggressBar from '~/components/Composite/ProggressBar';
 
@@ -23,12 +23,16 @@ export default function Home() {
                 <ProggressBar progress={20} />
             </View>
             <View className="border border-dashed border-fuchsia-600 p-5">
-                <HabitProgress />
+                <HabitProgress id="1" />
             </View>
             <View className="border border-dashed border-fuchsia-600 p-5">
-                <HabitProgress />
+                <HabitProgress id="2" />
             </View>
-            <HomeButton />
+            <View className="border border-dashed border-fuchsia-600 p-5" />
+
+            <View className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2 transform">
+                <Link href="/newHabit" />
+            </View>
         </View>
     );
 }
