@@ -1,0 +1,7 @@
+backend/accounts/__pycache__
+backend/accounts/migrations/__pycache__
+backend/habit/__pycache__
+backend/config/__pycache__/__init__.cpython-313.pyc
+backend/config/__pycache__/settings.cpython-313.pyc
+backend/config/__pycache__/urls.cpython-313.pyc
+backend/config/__pycache__/wsgi.cpython-313.pyc
