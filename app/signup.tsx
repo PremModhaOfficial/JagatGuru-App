@@ -1,26 +1,15 @@
 import { goBack, navigate } from 'expo-router/build/global-state/routing';
 import { ScrollView, TouchableOpacity, View } from 'react-native';
 
-import PlayerCard, { PlayerCardProps } from '~/components/Composite/PlayerCard';
 import AppText from '~/components/Individual/AppText';
 import SignUp from '~/components/Composite/Signup';
-import LoginPage from '~/components/Composite/Login';
-// import HabitTracker from '~/components/Composite/user_habit_traking'
 
-const player: PlayerCardProps = {
-    moto: 'Do The had work especialy when you dont feel like it',
-    name: 'prem',
-    level: 0,
-};
-
-export default function Home() {
+export default function SignUpPage() {
     return (
         <View className="flex-1 bg-black">
             <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-                {/* <PlayerCard {...player} /> */}
-                <SignUp/>
-                {/* <LoginPage/> */}
-                {/* <HabitTracker/> */}
+                <SignUp />
+                {/* </> */}
             </ScrollView>
             {/* my component call */}
             {/* <HomeButton /> */}
