@@ -1,8 +1,10 @@
 import { goBack, navigate } from 'expo-router/build/global-state/routing';
-import { ScrollView, TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 import PlayerCard, { PlayerCardProps } from '~/components/Composite/PlayerCard';
 import AppText from '~/components/Individual/AppText';
+import Habitdetail from '~/components/Habitdetail';
+import App from '~/components/gamification/App';
 
 const player: PlayerCardProps = {
     moto: 'Do The had work especialy when you dont feel like it',
@@ -13,10 +15,7 @@ const player: PlayerCardProps = {
 export default function Home() {
     return (
         <View className="flex-1 bg-black">
-            <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-                <PlayerCard {...player} />
-            </ScrollView>
-            <HomeButton />
+            <App/>
         </View>
     );
 }

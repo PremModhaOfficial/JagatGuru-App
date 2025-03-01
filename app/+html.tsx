@@ -42,6 +42,8 @@ export default function Root({ children }: { children: React.ReactNode }) {
 
                 {/* Using raw CSS styles as an escape-hatch to ensure the background color never flickers in dark-mode. */}
                 <style dangerouslySetInnerHTML={{ __html: responsiveBackground }} />
+                {/* Suppress VirtualizedList warning in development */}
+                <style dangerouslySetInnerHTML={{ __html: suppressWarnings }} />
                 {/* Add any additional <head> elements that you want globally available on web... */}
             </head>
             <body className="bg-black">{children}</body>
@@ -57,4 +59,10 @@ body {
   body {
     background-color: #000;
   }
+}`;
+
+const suppressWarnings = `
+/* Temporarily suppress the nested VirtualizedList warning */
+.VirtualizedListWarning {
+  display: none !important;
 }`;

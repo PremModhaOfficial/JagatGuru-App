@@ -17,6 +17,7 @@ interface UserData {
     profilePhoto: string;
 }
 
+
 interface HabitProfileHeaderProps {
     user?: UserData;
 }
@@ -109,10 +110,11 @@ const HabitDetail: React.FC<HabitProfileHeaderProps> = ({ user }) => {
     };
 
     return (
-        <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.container}>
             {/* Card for Profile Photo, Name, and Motto */}
             <View style={styles.cardHorizontal}>
                 <Image
+                
                     source={{ uri: userData.profilePhoto }}
                     style={styles.profilePhoto}
                 />
@@ -138,7 +140,7 @@ const HabitDetail: React.FC<HabitProfileHeaderProps> = ({ user }) => {
                     )}
                 </View>
             </View>
-        </ScrollView>
+        </View>
     );
 };
 
